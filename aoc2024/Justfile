@@ -1,0 +1,19 @@
+set dotenv-required
+set dotenv-load := true
+
+DAY := `date +%d`
+YEAR := `date +%Y`
+
+create:
+    cp ./template.py {{DAY}}.py
+
+part1:
+    aoc download --day {{DAY}} --year {{YEAR}} -i ./{{DAY}}-input.txt -p ./{{DAY}}-puzzle.md
+
+part2:
+    aoc download --day {{DAY}} --year {{YEAR}} -i ./{{DAY}}-input.txt -p ./{{DAY}}-puzzle.md  -o
+
+submit1 $ANSWER:
+    aoc submit --day {{DAY}} --year {{YEAR}} 1 {{ANSWER}}
+submit2 $ANSWER:
+    aoc submit --day {{DAY}} --year {{YEAR}} 2 {{ANSWER}}
