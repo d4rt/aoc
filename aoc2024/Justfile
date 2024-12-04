@@ -9,6 +9,7 @@ create:
 
 part1:
     aoc download --day {{DAY}} --year {{YEAR}} -i ./{{DAY}}-input.txt -p ./{{DAY}}-puzzle.md
+    cp ./template.py {{DAY}}.py
 
 part2:
     aoc download --day {{DAY}} --year {{YEAR}} -i ./{{DAY}}-input.txt -p ./{{DAY}}-puzzle.md  -o
